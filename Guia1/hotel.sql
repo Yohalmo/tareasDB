@@ -123,3 +123,11 @@ CREATE TABLE valoraciones (
     puntuacion INT,
     FOREIGN KEY (id_reservacion) REFERENCES reservaciones(id_reservacion)
 );
+
+create table bitacoras(
+	id int identity primary key,
+	tabla varchar(50) not null,
+	valor_anterior varchar(255) not null,
+	valor_nuevo varchar(255) not null,
+	descripcion varchar(1000) not null 
+)
